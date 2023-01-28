@@ -160,4 +160,8 @@ But the deseases distribution showed a low number of samples for pneumonia and a
 <br>Pneumonia is presented as a rare desease compared to other cases in the dataset such as infiltrations and effusion. This could indicated that this is a difficult desease to diagnose. Therefore, each case of pneumonia should be labeled by at least three different radiologists, independent one from the other. Saving the clinicians reports in digital files could bypass the NLP inaccuracies as well.
 
 **Algorithm Performance Standard:**
-<br>
+<br>Rajpurkar, P. et al (2017) represents in their study an F1 score for four radiologists, the average being `0.387`. Since radiologists are the reliability for desease detection nowadays, this value would be bench mark to compare at the beginning, but since the model presented in this document shows an F1 score of `0.614`, this value sets the new standard for upcoming models.
+
+
+### 7. Bibliography
+1. Rajpurkar, P. et al. CheckXNet: Radiologist-Level Pneumonia detection on X-Rays with Deep Learning. (2017). [https://arxiv.org/pdf/1711.05225v3.pdf](https://arxiv.org/pdf/1711.05225v3.pdf)
