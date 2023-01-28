@@ -103,18 +103,50 @@ All VGG layers were frozen for the training step, whereas all the three new line
 **Figure 1.** Training accuracy and loss graphs
 
 ![training_graph](images/metrics.png)
-**Figure 1.** Metrics used to evaluate the model's performance
+**Figure 2.** Metrics used to evaluate the model's performance
 
 **Final Threshold and Explanation:**
+<br>From the Threshold vs F1 Score graph, the threshold was extracted taking the F1 max value in the graph and detecting the threshold value at that point, which turn out to be `0.403407`.
 
 ### 4. Databases
- (For the below, include visualizations as they are useful and relevant)
+The EDA analysis showed a normal distribution for male and female ages as expected:
+
+![age_distribution](images/age_distribution.png)
+**Figure 3.** Age distribution
+
+Moreover, it was also concluded a balanced between sick and health patients:
+![sick_health_patients](images/sick_health_patients.png)
+**Figure 4.** Sick vs Healthy patients
+
+But the deseases distribution showed a low number of samples for pneumonia and a high presence of infiltration, effusion and atelectasis cases:
+
+![common_deseases](images/common_deseases.png)
+**Figure 5.** Deseases distribution
 
 **Description of Training Dataset:**
+The training dataset consisted of the 80% of the cases presented. Nevertheless, since pneumonia cases were low in comparison with other deseases, a balanced readjustment was necessary.
+<br>The final distribution after balancing the dataset was as follows:
 
+|Desease              | Samples  | Percentage  |
+|---------------------|----------|-------------|
+|Pneumonia:           | 1145     | 49.48%      |
+|Infiltration:        | 669      | 28.91%      |
+|No Finding:          | 662      | 28.61%      |
+|Effusion:            | 348      | 15.04%      |
+|Atelectasis:         | 332      | 14.35%      |
+|Edema:               | 280      | 12.1%       |
+|Consolidation:       | 159      | 6.87%       |
+|Mass:                | 119      | 5.14%       |
+|Nodule:              | 117      | 5.06%       |
+|Pneumothorax:        | 79       | 3.41%       |
+|Pleural_Thickening:  | 75       | 3.24%       |
+|Cardiomegaly:        | 65       | 2.81%       |
+|Emphysema:           | 38       | 1.64%       |
+|Fibrosis:            | 29       | 1.25%       |
+|Hernia:              | 5        | 0.22%       |
 
 **Description of Validation Dataset:**
-
+The validation set included the other 20% of the dataset and the same balancing procedure was applied to ease the post-training analysis.
 
 ### 5. Ground Truth
 
