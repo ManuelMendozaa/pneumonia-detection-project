@@ -124,33 +124,32 @@ But the deseases distribution showed a low number of samples for pneumonia and a
 **Figure 5.** Deseases distribution
 
 **Description of Training Dataset:**
-The training dataset consisted of the 80% of the cases presented. Nevertheless, since pneumonia cases were low in comparison with other deseases, a balanced readjustment was necessary.
+<br>The training dataset consisted of the 80% of the cases presented. Nevertheless, since pneumonia cases were low in comparison with other deseases, a balanced readjustment was necessary.
 <br>The final distribution after balancing the dataset was as follows:
 
 |Desease              | Samples  | Percentage  |
 |---------------------|----------|-------------|
-|Pneumonia:           | 1145     | 49.48%      |
-|Infiltration:        | 669      | 28.91%      |
-|No Finding:          | 662      | 28.61%      |
-|Effusion:            | 348      | 15.04%      |
-|Atelectasis:         | 332      | 14.35%      |
-|Edema:               | 280      | 12.1%       |
-|Consolidation:       | 159      | 6.87%       |
-|Mass:                | 119      | 5.14%       |
-|Nodule:              | 117      | 5.06%       |
-|Pneumothorax:        | 79       | 3.41%       |
-|Pleural_Thickening:  | 75       | 3.24%       |
-|Cardiomegaly:        | 65       | 2.81%       |
-|Emphysema:           | 38       | 1.64%       |
-|Fibrosis:            | 29       | 1.25%       |
-|Hernia:              | 5        | 0.22%       |
+|Pneumonia            | 1145     | 49.48%      |
+|Infiltration         | 669      | 28.91%      |
+|No Finding           | 662      | 28.61%      |
+|Effusion             | 348      | 15.04%      |
+|Atelectasis          | 332      | 14.35%      |
+|Edema                | 280      | 12.1%       |
+|Consolidation        | 159      | 6.87%       |
+|Mass                 | 119      | 5.14%       |
+|Nodule               | 117      | 5.06%       |
+|Pneumothorax         | 79       | 3.41%       |
+|Pleural_Thickening   | 75       | 3.24%       |
+|Cardiomegaly         | 65       | 2.81%       |
+|Emphysema            | 38       | 1.64%       |
+|Fibrosis             | 29       | 1.25%       |
+|Hernia               | 5        | 0.22%       |
 
 **Description of Validation Dataset:**
-The validation set included the other 20% of the dataset and the same balancing procedure was applied to ease the post-training analysis.
+<br>The validation set included the other 20% of the dataset and the same balancing procedure was applied to ease the post-training analysis.
 
 ### 5. Ground Truth
-
-
+<br>Taking into account that the Findings label in the dataset were obtain by a NLP algorithm from thousands of reports already gives a error margin for interpretation that has to be considered. This, as well as the possibility of human error in some of these reports, leaves the reliability below 100%.
 
 ### 6. FDA Validation Plan
 
