@@ -72,16 +72,38 @@ model.compile(optimizer=optimizer, loss=loss, metrics=['binary_accuracy'])
 ### 3. Algorithm Training
 
 **Parameters:**
-* Types of augmentation used during training
-* Batch size
-* Optimizer learning rate
-* Layers of pre-existing architecture that were frozen
-* Layers of pre-existing architecture that were fine-tuned
-* Layers added to pre-existing architecture
+<br>Augmentation used during training:
 
-<< Insert algorithm training performance visualization >>
+```python
+idg = ImageDataGenerator(
+  rescale = 1./255,
+  horizontal_flip = True,
+  vertical_flip = False,
+  height_shift_range = 0.1,
+  width_shift_range = 0.1,
+  rotation_range = 15,
+  zoom_range = 0.1,
+  fill_mode = 'constant',
+  samplewise_center = True,
+  samplewise_std_normalization = True
+)
+```
 
-<< Insert P-R curve >>
+List of parameters
+
+| Parameter     | Value     |
+|---------------|-----------|
+| Batch size    | 32        |
+| Learning rate | 7e-4      |
+| Epochs        | 10        |
+
+All VGG layers were frozen for the training step, whereas all the three new linear layers were trained to detect the pneumonia.
+
+![training_graph](images/training.png)
+**Figure 1.** Training accuracy and loss graphs
+
+![training_graph](images/metrics.png)
+**Figure 1.** Metrics used to evaluate the model's performance
 
 **Final Threshold and Explanation:**
 
