@@ -154,7 +154,10 @@ But the deseases distribution showed a low number of samples for pneumonia and a
 ### 6. FDA Validation Plan
 
 **Patient Population Description for FDA Validation Dataset:**
+<br>The patients' population should consist of males and females from zero to 100 years old if possible, thinking that the life expectancy tendency is to increase with each year. Both genders should have a equal proportion of cases, and although other deseases are not the main goal of this algorithm, it would be important to consider cases of other deseases that either include or not pneumonia to increase the training area of the model.
 
 **Ground Truth Acquisition Methodology:**
+<br>Pneumonia is presented as a rare desease compared to other cases in the dataset such as infiltrations and effusion. This could indicated that this is a difficult desease to diagnose. Therefore, each case of pneumonia should be labeled by at least three different radiologists, independent one from the other. Saving the clinicians reports in digital files could bypass the NLP inaccuracies as well.
 
 **Algorithm Performance Standard:**
+<br>
