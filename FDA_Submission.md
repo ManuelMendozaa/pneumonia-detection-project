@@ -29,7 +29,7 @@ With these four scenarios in mind, the algorithm's prediction should only be use
 
 ### 2. Algorithm Design and Function
 
-<< Insert Algorithm Flowchart >>
+[flowchart](images/flowchart.png)
 
 **DICOM Checking Steps:**
 
