@@ -149,7 +149,7 @@ But the deseases distribution showed a low number of samples for pneumonia and a
 <br>The validation set included the other 20% of the dataset and the same balancing procedure was applied to ease the post-training analysis.
 
 ### 5. Ground Truth
-<br>Taking into account that the Findings label in the dataset were obtain by a NLP algorithm from thousands of reports already gives a error margin for interpretation that has to be considered. This, as well as the possibility of human error in some of these reports, leaves the reliability below 100%.
+Taking into account that the Findings label in the dataset were obtain by a NLP algorithm from thousands of reports already gives a error margin for interpretation that has to be considered. This, as well as the possibility of human error in some of these reports, leaves the reliability below 100%.
 
 ### 6. FDA Validation Plan
 
