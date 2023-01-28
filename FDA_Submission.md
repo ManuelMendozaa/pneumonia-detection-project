@@ -32,7 +32,7 @@ Some of the following preexisting or suspected conditions may not disturb in the
 ![flowchart](images/flowchart.png)
 
 **DICOM Checking Steps:**
-The DICOM file has to go throw the following filter steps:
+<br>The DICOM file has to go throw the following filter steps:
 1. The modality must be DX (X-Ray).
 2. The body part examined must be CHEST.
 3. The patient's position must be either PA or AP.
@@ -40,10 +40,34 @@ The DICOM file has to go throw the following filter steps:
 All three validations have to be successful to continue with the preprocessing step.
 
 **Preprocessing Steps:**
-
+<br>The preprocessing steps are:
+1. Extract pixel array from DICOM file.
+2. Normalize pixel dividing their values by 255.
+3. Resize image to a 224x224 shape
 
 **CNN Architecture:**
+<br>The first block of the architecture contains the VGG-16 model, extracting the last linear layers. From there, three new linear layers where added with dropout between each of them. `Adam` was selected as the model's optimizer and the loss function for the training step was the `Binary Cross-Entropy` function.
 
+```python
+model = Sequential()
+
+# VGG model
+model.add(load_pretrained_model('flatten'))
+
+# Dense layers
+model.add(Dense(2048, activation='relu'))
+model.add(Dropout(0.4))
+model.add(Dense(2048, activation='relu'))
+model.add(Dropout(0.2))
+model.add(Dense(1, activation='sigmoid'))
+
+# Optimizer
+optimizer = Adam(learning_rate=lr)
+loss = 'binary_crossentropy'
+
+# Compite model
+model.compile(optimizer=optimizer, loss=loss, metrics=['binary_accuracy'])
+```
 
 ### 3. Algorithm Training
 
